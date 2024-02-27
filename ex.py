@@ -26,8 +26,7 @@ pdb_ck = ("https://api.foiarchive.org/docs?"
            "full_text=wfts.khrushchev")
 # Multi-collection query of documents mentioning hussein and rumsfeld
 drsh = ("https://api.foiarchive.org/docs?"
-        "select=doc_id,corpus,authored,classification,title,body,"
-        "persons(full_name),countries(country_name)&"
+        "select=doc_id,corpus,authored,classification,title,body&"
         "wfts.hussein%20rumsfeld")
 
 
