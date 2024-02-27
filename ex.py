@@ -27,8 +27,9 @@ pdb_ck = ("https://api.foiarchive.org/docs?"
 # Multi-collection query of documents mentioning hussein and rumsfeld
 drsh = ("https://api.foiarchive.org/docs?"
         "select=doc_id,corpus,authored,classification,title,body&"
-        "wfts.hussein%20rumsfeld")
+        "classification=in.(secret,top%20secret)&"
+        "full_text=wfts.hussein%20rumsfeld")
 
 
-df = call_api(pdb_cmc)     # Try the others or your own
+df = call_api(drsh)     # Try the others or your own
 print(df)
